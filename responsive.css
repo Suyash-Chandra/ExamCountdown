@@ -1,0 +1,49 @@
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .main-timer {
+    width: 100%;
+  }
+
+  #countdown {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .time-unit {
+    margin: 5px 0;
+  }
+
+  .exam-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exam-item {
+    margin: 5px 0;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #examTitle {
+    font-size: 1.5em;
+  }
+
+  .time-value {
+    font-size: 2em;
+  }
+
+  .time-label {
+    font-size: 0.8em;
+  }
+}
