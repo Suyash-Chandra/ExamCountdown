@@ -1,0 +1,131 @@
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --accent-color: #4a90e2;
+    --card-bg: #2a2a2a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 120px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    max-width: 5400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+}
+
+.main-timer {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#examTitle {
+    font-size: 2.1em;
+    margin-bottom: 15px;
+}
+
+#countdown {
+    font-size: 3.5em;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-value {
+    font-size: 1.5em;
+}
+
+.time-label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+#expectedDate {
+    font-size: 1em;
+    color: #888;
+}
+
+.exam-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 25px;
+}
+
+.exam-item {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exam-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.exam-item.active {
+    border: 2px solid var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    #countdown {
+        font-size: 2.5em;
+    }
+}
+
+.footer-links {
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.footer-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
